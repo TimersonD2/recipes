@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <title>Create Recipe</title>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="nav">
+            <div class="nav">
+                <h1>Add New Recipe</h1>
+                <div>
+                    <h3><a href="/success">Dashboard</a></h3>
+                    <h3><a href="/Logout">Logout</a></h3>
+                </div>
+            </div>
+        </div>
+    
+        <div class="recipe">
+            <form action="/createRecipe" method="POST">
+                <label for="name">Recipe Name:</label>
+                <input type="text" name="name" value="">
+                <label for="description">Description:</label>
+                <input type="text" name="description" value="">
+                <label for="thirty">Under 30 Minutes?</label>
+                <label for="thirty">Yes</label>
+                <input type="radio" name="thirty">
+                <label for="no">No</label>
+                <input type="radio" name="no">
+                <label for="date_made">Date Made On: </label>
+                <input type="date" name="date_made" value="">
+                <h6>Instructions:</h6>
+                <textarea name="instructions" value="" cols="50" rows="5"></textarea>
+
+            
+                <input type="submit" value="Create">
+        
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
